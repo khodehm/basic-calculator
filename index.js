@@ -19,7 +19,6 @@ function  handelSubmitFormSumation () {
         const value1=document.getElementById("input1").value;
         const value2=document.getElementById("input2").value;
         if(value1&&value2){
-
         let number= parseInt(value1) * parseInt(value2);
         alert('حاصل:'+number)
     }else{
@@ -32,6 +31,7 @@ function  handelSubmitFormSumation () {
         const value1=document.getElementById("input1").value;
         const value2=document.getElementById("input2").value;
         if(value1&&value2){
+            
         let number= parseInt(value1) / parseInt(value2);
         alert('حاصل:'+number)
 
