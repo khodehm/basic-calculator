@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Test</title>
+</head>
+<body>
+  <h1>Test Notifications</h1>
+  <button id="notify-btn">Enable Notifications</button>
+
+  <script>
+    document.getElementById('notify-btn').addEventListener('click', () => {
+      // Check for notification support
+      if (!('Notification' in window)) {
+        alert('This browser does not support notifications.');
+        return;
+      }
+
+      // Ask for permission
+      Notification.requestPermission().then(permission => {
+        if (permission === 'granted') {
+          new Notification('Welcome! Notifications are enabled.');
+        } else {
+          alert('Notifications permission denied.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
