@@ -12,12 +12,7 @@
   <script>
     document.getElementById('notify-btn').addEventListener('click', () => {
       // Check for notification support
-      if (!('Notification' in window)) {
-        alert('This browser does not support notifications.');
-        return;
-      }
 
-      // Ask for permission
       Notification.requestPermission().then(permission => {
         if (permission === 'granted') {
           new Notification('Welcome! Notifications are enabled.');
@@ -26,6 +21,9 @@
         }
       });
     });
+      
+
+      // Ask for permission
   </script>
 </body>
 </html>
